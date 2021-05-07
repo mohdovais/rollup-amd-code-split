@@ -7,6 +7,7 @@ define(["exports"], function (_exports) {
   _exports["default"] = void 0;
 
   function sum() {
+    console.log(Date.now());
     return Array.from(arguments).reduce(function (a, b) {
       return a + b;
     });

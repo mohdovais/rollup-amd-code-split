@@ -9,7 +9,7 @@ define(["require"], function (_require) {
 
   var app = function app() {
     new Promise(function (_resolve, _reject) {
-      return _require(['./chunk-63b923ee.amd.js'], function (imported) {
+      return _require(['./chunk-346ae363.amd.js'], function (imported) {
         return _resolve(_interopRequireWildcard(imported));
       }, _reject);
     }).then(function (sum) {

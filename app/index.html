@@ -9,16 +9,7 @@
   <body>
     <script src="../node_modules/requirejs/require.js"></script>
     <script>
-      require.config({
-        packages: [
-          {
-            name: "output",
-            location: "/output", // default 'packagename'
-            main: "output.amd", // default 'main'
-          },
-        ],
-      });
-      require(["output"]);
+      require(["/output/output.amd.js"]);
     </script>
     <script async type="module" src="../output/output.esm.js"></script>
   </body>

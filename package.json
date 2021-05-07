@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "rollup -c",
+    "prewatch": "rm -rf output",
+    "watch": "rollup -c -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
