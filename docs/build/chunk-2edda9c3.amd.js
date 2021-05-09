@@ -4,15 +4,15 @@ define(["exports"], function (_exports) {
   Object.defineProperty(_exports, "__esModule", {
     value: true
   });
-  _exports["default"] = void 0;
+  _exports.default = void 0;
 
   function sum() {
-    console.log(Date.now());
+    console.log(Date.now() - window.startTime);
     return Array.from(arguments).reduce(function (a, b) {
       return a + b;
     });
   }
 
   var _default = sum;
-  _exports["default"] = _default;
+  _exports.default = _default;
 });

@@ -4,13 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>AMD</title>
   </head>
   <body>
-    <script src="../node_modules/requirejs/require.js"></script>
     <script>
-      require(["/output/output.amd.js"]);
+      window.startTime = Date.now();
     </script>
-    <script async type="module" src="../output/output.esm.js"></script>
+    <script src="../vendor/requirejs@2.3.6/require.min.js"></script>
+    <script>
+      require(["../build/main.amd.js"]);
+    </script>
   </body>
 </html>

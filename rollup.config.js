@@ -4,10 +4,9 @@ const config = [
   {
     input: "src/index.js",
     output: {
-      dir: "output",
+      dir: "docs/build",
       format: "esm",
-      name: "output",
-      entryFileNames: "output.esm.js",
+      entryFileNames: "main.esm.js",
       chunkFileNames: "chunk-[hash].esm.js",
     },
     plugins: [
@@ -29,16 +28,34 @@ const config = [
   {
     input: "src/index.js",
     output: {
-      dir: "output",
+      dir: "docs/build",
       format: "esm",
-      name: "output",
-      entryFileNames: "output.amd.js",
+      entryFileNames: "main.amd.js",
       chunkFileNames: "chunk-[hash].amd.js",
     },
     plugins: [
       getBabelOutputPlugin({
         babelrc: false,
-        presets: [["@babel/preset-env", { modules: "amd" }]],
+        presets: [
+          ["@babel/preset-env", { modules: "amd", targets: { ie: "11" } }],
+        ],
+      }),
+    ],
+  },
+  {
+    input: "src/index.js",
+    output: {
+      dir: "docs/build",
+      format: "esm",
+      entryFileNames: "main.system.js",
+      chunkFileNames: "chunk-[hash].system.js",
+    },
+    plugins: [
+      getBabelOutputPlugin({
+        babelrc: false,
+        presets: [
+          ["@babel/preset-env", { modules: "systemjs", targets: { ie: "11" } }],
+        ],
       }),
     ],
   },

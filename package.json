@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "rollup -c",
-    "prewatch": "rm -rf output",
+    "prewatch": "rm -rf docs/build",
     "watch": "rollup -c -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,8 +16,5 @@
     "@babel/preset-env": "^7.14.1",
     "@rollup/plugin-babel": "^5.3.0",
     "rollup": "^2.47.0"
-  },
-  "dependencies": {
-    "requirejs": "^2.3.6"
   }
 }
